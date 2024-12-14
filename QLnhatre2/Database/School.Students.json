@@ -1,0 +1,195 @@
+[{
+  "_id": {
+    "$oid": "674eafd38d8244a25a0525dc"
+  },
+  "họ_tên": "Nguyễn Văn A",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2018-01-15T00:00:00.000Z"
+  },
+  "địa_chỉ": "123 Đường ABC, Quận 1, TP. HCM",
+  "mã_phụ_huynh": "PH001",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE001"
+},
+{
+  "_id": {
+    "$oid": "674eb00b8d8244a25a0525de"
+  },
+  "họ_tên": "Trần Thị B",
+  "giới_tính": "Nữ",
+  "ngày_sinh": {
+    "$date": "2019-05-10T00:00:00.000Z"
+  },
+  "địa_chỉ": "456 Đường DEF, Quận 2, TP. HCM",
+  "mã_phụ_huynh": "PH002",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE002"
+},
+{
+  "_id": {
+    "$oid": "674eb00b8d8244a25a0525df"
+  },
+  "họ_tên": "Lê Văn C",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2017-09-20T00:00:00.000Z"
+  },
+  "địa_chỉ": "789 Đường GHI, Quận 3, TP. HCM",
+  "mã_phụ_huynh": "PH003",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE003"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b2"
+  },
+  "họ_tên": "Trần Thị D",
+  "giới_tính": "Nữ",
+  "ngày_sinh": {
+    "$date": "2016-05-10T00:00:00.000Z"
+  },
+  "địa_chỉ": "456 Đường XYZ, Quận 4, TP. HCM",
+  "mã_phụ_huynh": "PH004",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE004"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b3"
+  },
+  "họ_tên": "Nguyễn Văn E",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2018-01-15T00:00:00.000Z"
+  },
+  "địa_chỉ": "123 Đường ABC, Quận 1, TP. HCM",
+  "mã_phụ_huynh": "PH005",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE005"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b4"
+  },
+  "họ_tên": "Phạm Thị F",
+  "giới_tính": "Nữ",
+  "ngày_sinh": {
+    "$date": "2017-11-20T00:00:00.000Z"
+  },
+  "địa_chỉ": "567 Đường LMN, Quận 5, TP. HCM",
+  "mã_phụ_huynh": "PH006",
+  "mã_lớp": "L1B",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE006"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b5"
+  },
+  "họ_tên": "Lê Văn G",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2015-03-18T00:00:00.000Z"
+  },
+  "địa_chỉ": "890 Đường OPQ, Quận 6, TP. HCM",
+  "mã_phụ_huynh": "PH007",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE007"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b6"
+  },
+  "họ_tên": "Hoàng Thị H",
+  "giới_tính": "Nữ",
+  "ngày_sinh": {
+    "$date": "2019-07-25T00:00:00.000Z"
+  },
+  "địa_chỉ": "321 Đường RST, Quận 7, TP. HCM",
+  "mã_phụ_huynh": "PH008",
+  "mã_lớp": "L1A",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE008"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b7"
+  },
+  "họ_tên": "Đỗ Văn I",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2016-09-12T00:00:00.000Z"
+  },
+  "địa_chỉ": "654 Đường UVW, Quận 8, TP. HCM",
+  "mã_phụ_huynh": "PH009",
+  "mã_lớp": "L1B",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE009"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b8"
+  },
+  "họ_tên": "Vũ Thị J",
+  "giới_tính": "Nữ",
+  "ngày_sinh": {
+    "$date": "2017-02-28T00:00:00.000Z"
+  },
+  "địa_chỉ": "987 Đường XYZ, Quận 9, TP. HCM",
+  "mã_phụ_huynh": "PH010",
+  "mã_lớp": "L1B",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE010"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59b9"
+  },
+  "họ_tên": "Ngô Văn K",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2018-06-15T00:00:00.000Z"
+  },
+  "địa_chỉ": "222 Đường DEF, Quận 10, TP. HCM",
+  "mã_phụ_huynh": "PH011",
+  "mã_lớp": "L1B",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE011"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59ba"
+  },
+  "họ_tên": "Phan Thị L",
+  "giới_tính": "Nữ",
+  "ngày_sinh": {
+    "$date": "2015-08-22T00:00:00.000Z"
+  },
+  "địa_chỉ": "111 Đường HIJ, Quận 11, TP. HCM",
+  "mã_phụ_huynh": "PH012",
+  "mã_lớp": "L1B",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE012"
+},
+{
+  "_id": {
+    "$oid": "675d38b32d8a1d1f7f0b59bb"
+  },
+  "họ_tên": "Bùi Văn M",
+  "giới_tính": "Nam",
+  "ngày_sinh": {
+    "$date": "2019-04-10T00:00:00.000Z"
+  },
+  "địa_chỉ": "333 Đường KLM, Quận 12, TP. HCM",
+  "mã_phụ_huynh": "PH013",
+  "mã_lớp": "L1B",
+  "trạng_thái": "có mặt",
+  "ma_tre_em": "TE013"
+}]

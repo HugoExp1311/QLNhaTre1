@@ -1,0 +1,33 @@
+[{
+  "_id": {
+    "$oid": "675d37ca2d8a1d1f7f0b59ad"
+  },
+  "mã_giáo_viên": "GV001",
+  "họ_tên": "Nguyễn Văn A",
+  "giới_tính": "Nam",
+  "năm_sinh": 1980,
+  "email": "nguyenvana@example.com",
+  "số_điện_thoại": "0912345678"
+},
+{
+  "_id": {
+    "$oid": "675d37ca2d8a1d1f7f0b59ae"
+  },
+  "mã_giáo_viên": "GV002",
+  "họ_tên": "Trần Thị B",
+  "giới_tính": "Nữ",
+  "năm_sinh": 1985,
+  "email": "tranthib@example.com",
+  "số_điện_thoại": "0987654321"
+},
+{
+  "_id": {
+    "$oid": "675d37ca2d8a1d1f7f0b59af"
+  },
+  "mã_giáo_viên": "GV003",
+  "họ_tên": "Phạm Văn T",
+  "giới_tính": "Nam",
+  "năm_sinh": 1990,
+  "email": "phamvant@example.com",
+  "số_điện_thoại": "0901234567"
+}]
