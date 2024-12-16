@@ -8,14 +8,16 @@ namespace QLnhatre2
 {
     public partial class Form1 : Form
     {
-     //   private readonly string connectionString = "mongodb://localhost:27017";
-      //  private readonly string databaseName = "School"; // Thay bằng tên database của bạn
+        //   private readonly string connectionString = "mongodb://localhost:27017";
+        //  private readonly string databaseName = "School"; // Thay bằng tên database của bạn
         private readonly StudentBLL studentBLL;
+        private readonly ClassroomBLL classroomBLL;
         public Form1()
         {
 
             InitializeComponent();
             studentBLL = new StudentBLL();
+            classroomBLL = new ClassroomBLL();
         }
         private void LoadStudentsByClass(string classCode)
         {
@@ -90,7 +92,7 @@ namespace QLnhatre2
                 dataGridView1.Columns.Add("ParentCode", "Mã Phụ Huynh");
                 dataGridView1.Columns.Add("ClassCode", "Mã Lớp");
                 dataGridView1.Columns.Add("State", "Trạng Thái");
-                
+
 
 
                 foreach (var student in students)
@@ -112,6 +114,61 @@ namespace QLnhatre2
                 MessageBox.Show("Lỗi: " + ex.Message);
             }
         }
+
+       private void LoadAllClassroom()
+{
+    try
+    {
+        List<Classroom> classrooms = classroomBLL.GetAllClassroom();
+
+        dataGridView1.DataSource = null;
+        dataGridView1.Rows.Clear();
+        dataGridView1.Columns.Clear();
+
+        if (classrooms.Count == 0)
+        {
+            MessageBox.Show("Không có dữ liệu.");
+            return;
+        }
+
+        dataGridView1.Columns.Add("ClassCode", "Mã lớp học");
+        dataGridView1.Columns.Add("ClassName", "Tên lớp");
+        dataGridView1.Columns.Add("StudentNumber", "Sĩ số");
+        dataGridView1.Columns.Add("TeacherCode", "Mã số giáo viên");
+        dataGridView1.Columns.Add("Day", "Ngày");
+        dataGridView1.Columns.Add("FoodList", "Thực đơn");
+        dataGridView1.Columns.Add("Activity", "Hoạt động");
+
+        foreach (var classroom in classrooms)
+        {
+            if (classroom.FoodList != null && classroom.Activity != null)
+            {
+                foreach (var day in classroom.FoodList)
+                {
+                    var activities = classroom.Activity.ContainsKey(day.Key) ? classroom.Activity[day.Key] : new List<string>();
+
+                    // Kết hợp danh sách món ăn và hoạt động thành chuỗi
+                    string foodListString = string.Join(", ", day.Value);
+                    string activityString = string.Join(", ", activities);
+
+                    dataGridView1.Rows.Add(
+                        classroom.ClassCode,
+                        classroom.ClassName,
+                        classroom.StudentNumber,
+                        classroom.TeacherCode,
+                        day.Key, // Ngày
+                        foodListString, // Thực đơn
+                        activityString // Hoạt động
+                    );
+                }
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        MessageBox.Show("Lỗi: " + ex.Message);
+    }
+}
         private void lớpLA1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadStudentsByClass("L1A");
@@ -147,13 +204,31 @@ namespace QLnhatre2
 
         private void buttonĐiểm_danh_Click(object sender, EventArgs e)
         {
-Form2 form2 = new Form2();
-    form2.Show();
+            Form2 form2 = new Form2();
+            form2.Show();
         }
 
         private void thựcĐơnToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lớpL1AToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hoạt_động.Visible = true;
+            LoadAllClassroom();
+        }
+
+        private void Hoạt_động_Click(object sender, EventArgs e)
+        {
+            Form3 form3 = new Form3();
+            form3.Show();
+        }
+
+        private void lớpL1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Hoạt_động.Visible = true;
+            LoadAllClassroom();
         }
 
 
