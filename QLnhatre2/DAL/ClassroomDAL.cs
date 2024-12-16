@@ -26,8 +26,18 @@ public void UpdateActivity(string classCode, string day, List<string> newActivit
     var update = Builders<Classroom>.Update.Set($"hoạt_động.{day}", newActivities);
     _classroomCollection.UpdateOne(filter, update);
 }
-
-        
+public void UpdateFood(string classCode, string day, List<string> newFoodList)
+{
+    var filter = Builders<Classroom>.Filter.Eq(c => c.ClassCode, classCode);
+    var update = Builders<Classroom>.Update.Set($"thực đơn.{day}", newFoodList);
+    _classroomCollection.UpdateOne(filter, update);
+}
+  public Classroom GetClassroomByCode(string classCode)
+{
+    var filter = Builders<Classroom>.Filter.Eq(c => c.ClassCode, classCode);
+    return _classroomCollection.Find(filter).FirstOrDefault();
+}
+      
 
 
     }

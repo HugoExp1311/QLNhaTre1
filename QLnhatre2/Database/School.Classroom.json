@@ -5,7 +5,46 @@
   "mã_lớp_học": "L1A",
   "tên_lớp": "Lớp 1A",
   "sĩ_số": 30,
-  "mã_giáo_viên": "GV001"
+  "mã_giáo_viên": "GV001",
+  "thực đơn": {
+    "thứ_2": [
+      "Cơm gà",
+      "Canh cải",
+      "Trái cây"
+    ],
+    "thứ_3": [
+      "Cơm cá",
+      "Canh khoai",
+      "Sữa"
+    ],
+    "thứ_4": [
+      "Cơm tôm",
+      "Canh cà",
+      "Nước ép"
+    ],
+    "thứ_5": [
+      "Cơm thịt",
+      "Canh đậu",
+      "Trái cây"
+    ]
+  },
+  "hoạt_động": {
+    "thứ_2": [
+      "Nhảy disco",
+      "học tiếng anh"
+    ],
+    "thứ_3": [
+      "Bóng chuyền",
+      "học về động vật"
+    ],
+    "thứ_4": [
+      "Trò chơi dân gian",
+      "học về màu sắc"
+    ],
+    "thứ_5": [
+      "Nhảy dây,Học về phương tiện giao thông"
+    ]
+  }
 },
 {
   "_id": {
@@ -14,5 +53,45 @@
   "mã_lớp_học": "L1B",
   "tên_lớp": "Lớp 1B",
   "sĩ_số": 28,
-  "mã_giáo_viên": "GV002"
+  "mã_giáo_viên": "GV002",
+  "thực đơn": {
+    "thứ_2": [
+      "Cơm gà",
+      "Canh cải",
+      "Trái cây"
+    ],
+    "thứ_3": [
+      "Cơm cá",
+      "Canh khoai",
+      "Sữa"
+    ],
+    "thứ_4": [
+      "Cơm tôm",
+      "Canh cà",
+      "Nước ép"
+    ],
+    "thứ_5": [
+      "Cơm thịt",
+      "Canh đậu",
+      "Trái cây"
+    ]
+  },
+  "hoạt_động": {
+    "thứ_2": [
+      "Nhảy dây",
+      "Học về phương tiện giao thông"
+    ],
+    "thứ_3": [
+      "Nhảy theo nhạc",
+      "Học về màu sắc"
+    ],
+    "thứ_4": [
+      "Chuyền banh",
+      "Học về con vật"
+    ],
+    "thứ_5": [
+      "Cướp cờ",
+      "Học về trái cây"
+    ]
+  }
 }]

@@ -17,6 +17,10 @@ namespace QLnhatre2.BLL
         {
             return _classroomDAL.GetAllClassroom();
         }
+public Classroom GetClassroomByCode(string classCode)
+{
+    return _classroomDAL.GetClassroomByCode(classCode);
+}
 
 
     }

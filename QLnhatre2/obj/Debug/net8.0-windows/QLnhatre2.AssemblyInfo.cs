@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("QLnhatre2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cac9ab2d544e3fadca7172b808f52bcba29dd95b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ffcc01d6ddf87182a525cfd00727ad29eab5c14")]
 [assembly: System.Reflection.AssemblyProductAttribute("QLnhatre2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("QLnhatre2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

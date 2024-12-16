@@ -42,6 +42,7 @@
             lớpL1ToolStripMenuItem = new ToolStripMenuItem();
             buttonĐiểm_danh = new Button();
             Hoạt_động = new Button();
+            thucdon = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             menuStrip1.SuspendLayout();
             SuspendLayout();
@@ -76,7 +77,7 @@
             // 
             kếtNốiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { studentToolStripMenuItem, bảngTeacherToolStripMenuItem, danhSachLớpToolStripMenuItem });
             kếtNốiToolStripMenuItem.Name = "kếtNốiToolStripMenuItem";
-            kếtNốiToolStripMenuItem.Size = new Size(224, 30);
+            kếtNốiToolStripMenuItem.Size = new Size(216, 30);
             kếtNốiToolStripMenuItem.Text = "Kết nối";
             // 
             // studentToolStripMenuItem
@@ -119,21 +120,21 @@
             // 
             thựcĐơnToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lớpL1AToolStripMenuItem, lớpL1ToolStripMenuItem });
             thựcĐơnToolStripMenuItem.Name = "thựcĐơnToolStripMenuItem";
-            thựcĐơnToolStripMenuItem.Size = new Size(224, 30);
+            thựcĐơnToolStripMenuItem.Size = new Size(216, 30);
             thựcĐơnToolStripMenuItem.Text = "Hoạt động lớp";
             thựcĐơnToolStripMenuItem.Click += thựcĐơnToolStripMenuItem_Click;
             // 
             // lớpL1AToolStripMenuItem
             // 
             lớpL1AToolStripMenuItem.Name = "lớpL1AToolStripMenuItem";
-            lớpL1AToolStripMenuItem.Size = new Size(224, 30);
+            lớpL1AToolStripMenuItem.Size = new Size(163, 30);
             lớpL1AToolStripMenuItem.Text = "Lớp L1A";
             lớpL1AToolStripMenuItem.Click += lớpL1AToolStripMenuItem_Click;
             // 
             // lớpL1ToolStripMenuItem
             // 
             lớpL1ToolStripMenuItem.Name = "lớpL1ToolStripMenuItem";
-            lớpL1ToolStripMenuItem.Size = new Size(224, 30);
+            lớpL1ToolStripMenuItem.Size = new Size(163, 30);
             lớpL1ToolStripMenuItem.Text = "Lớp L1B";
             lớpL1ToolStripMenuItem.Click += lớpL1ToolStripMenuItem_Click;
             // 
@@ -159,11 +160,23 @@
             Hoạt_động.Visible = false;
             Hoạt_động.Click += Hoạt_động_Click;
             // 
+            // thucdon
+            // 
+            thucdon.Location = new Point(36, 157);
+            thucdon.Name = "thucdon";
+            thucdon.Size = new Size(138, 49);
+            thucdon.TabIndex = 4;
+            thucdon.Text = "Thực đơn";
+            thucdon.UseVisualStyleBackColor = true;
+            thucdon.Visible = false;
+            thucdon.Click += thucdon_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1033, 450);
+            Controls.Add(thucdon);
             Controls.Add(Hoạt_động);
             Controls.Add(buttonĐiểm_danh);
             Controls.Add(dataGridView1);
@@ -194,5 +207,6 @@
         private ToolStripMenuItem lớpL1AToolStripMenuItem;
         private ToolStripMenuItem lớpL1ToolStripMenuItem;
         private Button Hoạt_động;
+        private Button thucdon;
     }
 }

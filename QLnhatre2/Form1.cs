@@ -115,19 +115,75 @@ namespace QLnhatre2
             }
         }
 
-       private void LoadAllClassroom()
+        private void LoadAllClassroom()
+        {
+            try
+            {
+                List<Classroom> classrooms = classroomBLL.GetAllClassroom();
+
+                dataGridView1.DataSource = null;
+                dataGridView1.Rows.Clear();
+                dataGridView1.Columns.Clear();
+
+                if (classrooms.Count == 0)
+                {
+                    MessageBox.Show("Không có dữ liệu.");
+                    return;
+                }
+
+                dataGridView1.Columns.Add("ClassCode", "Mã lớp học");
+                dataGridView1.Columns.Add("ClassName", "Tên lớp");
+                dataGridView1.Columns.Add("StudentNumber", "Sĩ số");
+                dataGridView1.Columns.Add("TeacherCode", "Mã số giáo viên");
+                dataGridView1.Columns.Add("Day", "Ngày");
+                dataGridView1.Columns.Add("FoodList", "Thực đơn");
+                dataGridView1.Columns.Add("Activity", "Hoạt động");
+
+                foreach (var classroom in classrooms)
+                {
+                    if (classroom.FoodList != null && classroom.Activity != null)
+                    {
+                        foreach (var day in classroom.FoodList)
+                        {
+                            var activities = classroom.Activity.ContainsKey(day.Key) ? classroom.Activity[day.Key] : new List<string>();
+
+                            // Kết hợp danh sách món ăn và hoạt động thành chuỗi
+                            string foodListString = string.Join(", ", day.Value);
+                            string activityString = string.Join(", ", activities);
+
+                            dataGridView1.Rows.Add(
+                                classroom.ClassCode,
+                                classroom.ClassName,
+                                classroom.StudentNumber,
+                                classroom.TeacherCode,
+                                day.Key, // Ngày
+                                foodListString, // Thực đơn
+                                activityString // Hoạt động
+                            );
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + ex.Message);
+            }
+        }
+        
+        private void LoadClassroomByCode(string classCode)
 {
     try
     {
-        List<Classroom> classrooms = classroomBLL.GetAllClassroom();
+        // Gọi đến tầng BLL để lấy thông tin lớp học theo mã lớp
+        Classroom classroom = classroomBLL.GetClassroomByCode(classCode);
 
         dataGridView1.DataSource = null;
         dataGridView1.Rows.Clear();
         dataGridView1.Columns.Clear();
 
-        if (classrooms.Count == 0)
+        if (classroom == null)
         {
-            MessageBox.Show("Không có dữ liệu.");
+            MessageBox.Show($"Không tìm thấy lớp học với mã {classCode}");
             return;
         }
 
@@ -139,28 +195,25 @@ namespace QLnhatre2
         dataGridView1.Columns.Add("FoodList", "Thực đơn");
         dataGridView1.Columns.Add("Activity", "Hoạt động");
 
-        foreach (var classroom in classrooms)
+        if (classroom.FoodList != null && classroom.Activity != null)
         {
-            if (classroom.FoodList != null && classroom.Activity != null)
+            foreach (var day in classroom.FoodList)
             {
-                foreach (var day in classroom.FoodList)
-                {
-                    var activities = classroom.Activity.ContainsKey(day.Key) ? classroom.Activity[day.Key] : new List<string>();
+                var activities = classroom.Activity.ContainsKey(day.Key) ? classroom.Activity[day.Key] : new List<string>();
 
-                    // Kết hợp danh sách món ăn và hoạt động thành chuỗi
-                    string foodListString = string.Join(", ", day.Value);
-                    string activityString = string.Join(", ", activities);
+                // Kết hợp danh sách món ăn và hoạt động thành chuỗi
+                string foodListString = string.Join(", ", day.Value);
+                string activityString = string.Join(", ", activities);
 
-                    dataGridView1.Rows.Add(
-                        classroom.ClassCode,
-                        classroom.ClassName,
-                        classroom.StudentNumber,
-                        classroom.TeacherCode,
-                        day.Key, // Ngày
-                        foodListString, // Thực đơn
-                        activityString // Hoạt động
-                    );
-                }
+                dataGridView1.Rows.Add(
+                    classroom.ClassCode,
+                    classroom.ClassName,
+                    classroom.StudentNumber,
+                    classroom.TeacherCode,
+                    day.Key, // Ngày
+                    foodListString, // Thực đơn
+                    activityString // Hoạt động
+                );
             }
         }
     }
@@ -169,6 +222,7 @@ namespace QLnhatre2
         MessageBox.Show("Lỗi: " + ex.Message);
     }
 }
+
         private void lớpLA1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             LoadStudentsByClass("L1A");
@@ -216,7 +270,9 @@ namespace QLnhatre2
         private void lớpL1AToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Hoạt_động.Visible = true;
-            LoadAllClassroom();
+            thucdon.Visible = true;
+           // LoadAllClassroom();
+            LoadClassroomByCode("L1A");
         }
 
         private void Hoạt_động_Click(object sender, EventArgs e)
@@ -227,8 +283,16 @@ namespace QLnhatre2
 
         private void lớpL1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Hoạt_động.Visible = true;
-            LoadAllClassroom();
+           Hoạt_động.Visible = true;
+            thucdon.Visible = true;
+           // LoadAllClassroom();
+            LoadClassroomByCode("L1B");
+        }
+
+        private void thucdon_Click(object sender, EventArgs e)
+        {
+ThucDon thucDon = new  ThucDon();
+            thucDon.Show();
         }
 
 

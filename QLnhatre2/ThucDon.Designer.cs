@@ -1,6 +1,6 @@
 ﻿namespace QLnhatre2
 {
-    partial class Form3
+    partial class ThucDon
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             label2 = new Label();
             label1 = new Label();
-            txtClassCode = new TextBox();
-            btnUpdateActivity = new Button();
             label3 = new Label();
-            txtDay = new TextBox();
             label4 = new Label();
-            txtActivity = new TextBox();
+            txtClassCode = new TextBox();
+            txtDay = new TextBox();
+            txtFood = new TextBox();
+            btnUpdateActivity = new Button();
             label5 = new Label();
             label6 = new Label();
             SuspendLayout();
@@ -44,110 +44,110 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(36, 32);
+            label2.Location = new Point(46, 34);
             label2.Name = "label2";
-            label2.Size = new Size(319, 46);
-            label2.TabIndex = 4;
-            label2.Text = "Cập nhật hoạt động";
+            label2.Size = new Size(298, 46);
+            label2.TabIndex = 5;
+            label2.Text = "Cập nhật thực đơn";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(36, 100);
+            label1.Location = new Point(46, 116);
             label1.MaximumSize = new Size(100, 100);
             label1.Name = "label1";
             label1.Size = new Size(68, 25);
-            label1.TabIndex = 5;
+            label1.TabIndex = 6;
             label1.Text = "Mã lớp";
-            // 
-            // txtClassCode
-            // 
-            txtClassCode.Location = new Point(120, 97);
-            txtClassCode.Name = "txtClassCode";
-            txtClassCode.Size = new Size(221, 31);
-            txtClassCode.TabIndex = 6;
-            // 
-            // btnUpdateActivity
-            // 
-            btnUpdateActivity.Location = new Point(120, 292);
-            btnUpdateActivity.Name = "btnUpdateActivity";
-            btnUpdateActivity.Size = new Size(150, 47);
-            btnUpdateActivity.TabIndex = 7;
-            btnUpdateActivity.Text = "Xác nhận";
-            btnUpdateActivity.UseVisualStyleBackColor = true;
-            btnUpdateActivity.Click += btnUpdateActivity_Click_1;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(36, 159);
+            label3.Location = new Point(46, 184);
             label3.MaximumSize = new Size(100, 100);
             label3.Name = "label3";
             label3.Size = new Size(42, 25);
-            label3.TabIndex = 8;
+            label3.TabIndex = 9;
             label3.Text = "Thứ";
-            // 
-            // txtDay
-            // 
-            txtDay.Location = new Point(120, 159);
-            txtDay.Name = "txtDay";
-            txtDay.Size = new Size(221, 31);
-            txtDay.TabIndex = 9;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(21, 234);
+            label4.Location = new Point(46, 252);
             label4.MaximumSize = new Size(100, 100);
             label4.Name = "label4";
             label4.Size = new Size(83, 25);
-            label4.TabIndex = 10;
+            label4.TabIndex = 11;
             label4.Text = "Cập nhật";
             // 
-            // txtActivity
+            // txtClassCode
             // 
-            txtActivity.Location = new Point(120, 234);
-            txtActivity.Name = "txtActivity";
-            txtActivity.Size = new Size(221, 31);
-            txtActivity.TabIndex = 11;
+            txtClassCode.Location = new Point(144, 116);
+            txtClassCode.Name = "txtClassCode";
+            txtClassCode.Size = new Size(221, 31);
+            txtClassCode.TabIndex = 12;
+            // 
+            // txtDay
+            // 
+            txtDay.Location = new Point(144, 181);
+            txtDay.Name = "txtDay";
+            txtDay.Size = new Size(221, 31);
+            txtDay.TabIndex = 13;
+            // 
+            // txtFood
+            // 
+            txtFood.Location = new Point(144, 252);
+            txtFood.Name = "txtFood";
+            txtFood.Size = new Size(221, 31);
+            txtFood.TabIndex = 14;
+            // 
+            // btnUpdateActivity
+            // 
+            btnUpdateActivity.Location = new Point(144, 313);
+            btnUpdateActivity.Name = "btnUpdateActivity";
+            btnUpdateActivity.Size = new Size(150, 47);
+            btnUpdateActivity.TabIndex = 15;
+            btnUpdateActivity.Text = "Xác nhận";
+            btnUpdateActivity.UseVisualStyleBackColor = true;
+            btnUpdateActivity.Click += btnUpdateActivity_Click;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(388, 103);
+            label5.Location = new Point(408, 122);
             label5.MaximumSize = new Size(100, 100);
             label5.Name = "label5";
             label5.Size = new Size(72, 25);
-            label5.TabIndex = 17;
+            label5.TabIndex = 16;
             label5.Text = "Vd: L1A";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(388, 165);
+            label6.Location = new Point(408, 187);
             label6.MaximumSize = new Size(100, 100);
             label6.Name = "label6";
             label6.Size = new Size(86, 25);
-            label6.TabIndex = 18;
+            label6.TabIndex = 17;
             label6.Text = "Vd: thứ_2";
             // 
-            // Form3
+            // ThucDon
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(txtActivity);
-            Controls.Add(label4);
-            Controls.Add(txtDay);
-            Controls.Add(label3);
             Controls.Add(btnUpdateActivity);
+            Controls.Add(txtFood);
+            Controls.Add(txtDay);
             Controls.Add(txtClassCode);
+            Controls.Add(label4);
+            Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(label2);
-            Name = "Form3";
-            Text = "Form3";
+            Name = "ThucDon";
+            Text = "ThucDon";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -156,12 +156,12 @@
 
         private Label label2;
         private Label label1;
-        private TextBox txtClassCode;
-        private Button btnUpdateActivity;
         private Label label3;
-        private TextBox txtDay;
         private Label label4;
-        private TextBox txtActivity;
+        private TextBox txtClassCode;
+        private TextBox txtDay;
+        private TextBox txtFood;
+        private Button btnUpdateActivity;
         private Label label5;
         private Label label6;
     }
